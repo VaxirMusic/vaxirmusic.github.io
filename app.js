@@ -25,10 +25,9 @@ languageButton.addEventListener("click", () =>
 );
 setLanguage(language);
 
-// Keep the published website release usable while future app releases are
-// picked up automatically from the repository used by the in-app updater.
+// Website downloads and the installed app share the public release repository.
 const websiteRepository = "VaxirMusic/vaxirmusic.github.io";
-const appRepository = "shxp3/VaxirMusic";
+const appRepository = websiteRepository;
 const versionLabel = document.getElementById("release-version");
 const sizeLabel = document.getElementById("release-size");
 let displayedVersion = parseReleaseVersion(

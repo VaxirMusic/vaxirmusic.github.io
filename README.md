@@ -2,18 +2,18 @@
 
 Official download page: https://vaxirmusic.github.io/
 
-Static HTML, CSS, and JavaScript. English and Thai are available from the language button. Product screenshots are captured from the native Windows app. No build step or external script service is needed.
+Static HTML, CSS, and JavaScript. English and Thai are available from the language button. No build step is required. GitHub Pages publishes the root of `main`.
 
-GitHub Pages publishes the root of `main`. `.nojekyll` serves the files directly.
+The HTML and `release.json` describe release **v1.1.5** in this public repository. Each release attaches `setup.exe` and `setup.sha256`. Update the HTML version, size, release date, and SHA-256 together with `release.json` when publishing a new fallback.
 
-The HTML and `release.json` provide a working fallback for the website repository's **v1.1.0** release. Every release must attach `setup.exe` and `setup.sha256` with those exact names. Update `release.json` and the HTML version, size, date, and hash metadata when publishing another fallback release.
+Both `app.js` and the Windows app check the latest stable release of `VaxirMusic/vaxirmusic.github.io`. The application source repository is private and cannot provide unauthenticated updates. Website downloads and in-app updates use the same public release assets.
 
-`app.js` also checks the latest stable release of `shxp3/VaxirMusic`, the repository used by the Windows app's updater and automated release workflow. It switches both download buttons, the checksum link, release link, version, and size together only for a strictly newer numeric version with exactly one uploaded installer and checksum. Asset URLs must point to the same tag in that app repository; drafts, prereleases, malformed metadata, missing assets, and unsafe URLs are ignored. A slow fallback response cannot replace a newer release already displayed.
+The page switches its download links and metadata together only for a newer valid release with exactly one uploaded installer and checksum. Drafts, prereleases, malformed metadata, unsafe URLs, and missing assets are ignored. A delayed fallback cannot replace a newer release. The static links remain usable without JavaScript or if the API is unavailable.
 
-When the app repository has no release, the network is unavailable, GitHub rate limits the request, or the response is invalid or older, the current website release stays available. JavaScript is optional for downloading the fallback installer. Future successful pushes to the app repository can therefore update the website's download without another website commit.
+Apps that still check the private repository need setup 1.1.5 installed once to use the public update feed. Future releases can then use **Settings > Check update > Update now**, or **Auto update** at startup. Windows asks for administrator permission. Favorites, history, and preferences are preserved.
 
-Older app versions need one setup update to **1.1.0 or later** to gain in-app updates. After that, **Settings → Check update** offers **Update now** or **Later**. **Auto update** is on by default and checks, downloads, installs, and restarts at startup; users can turn it off. Windows still asks for administrator permission before installation. Canceling leaves the current version installed, and updates or uninstalling preserve saved favorites, history, and preferences.
+For testing 1.1.5, the app workspace includes `dist/update-test/setup-1.1.4.exe`, an older local build using the corrected public feed. Install it and open the installed app to test upgrading to 1.1.5. Auto update is enabled by default; disable it before a manual check if you want to test the prompt.
 
-The application uses `https://vaxirmusic.github.io/` in its `discord.json` download setting. This lets Discord point to the same page across future releases.
+The application uses `https://vaxirmusic.github.io/` for its Discord download button.
 
 VaxirMusic is not affiliated with Google, YouTube, or Discord.
