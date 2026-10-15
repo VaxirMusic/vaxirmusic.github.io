@@ -4,7 +4,7 @@ Official download page: https://vaxirmusic.github.io/
 
 Static HTML, CSS, and JavaScript. English and Thai are available from the language button. No build step is required. GitHub Pages publishes the root of `main`.
 
-The HTML and `release.json` describe release **v1.1.5** in this public repository. Each release attaches `setup.exe` and `setup.sha256`. Update the HTML version, size, release date, and SHA-256 together with `release.json` when publishing a new fallback.
+The HTML and `release.json` describe release **v1.1.6** in this public repository. Each release attaches `setup.exe` and `setup.sha256`. Update the HTML version, size, release date, and SHA-256 together with `release.json` when publishing a new fallback.
 
 Both `app.js` and the Windows app check the latest stable release of `VaxirMusic/vaxirmusic.github.io`. The application source repository is private and cannot provide unauthenticated updates. Website downloads and in-app updates use the same public release assets.
 
