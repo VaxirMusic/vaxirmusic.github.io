@@ -1,7 +1,7 @@
 {
-    "version":  "1.1.9",
-    "released":  "2026-11-02",
-    "size_bytes":  80252928,
-    "sha256":  "d63010844ab86b507db52ae2a3c18cd79e4c42635b5dd771845381dc8613f548",
+    "version":  "1.1.10",
+    "released":  "2026-11-08",
+    "size_bytes":  80274432,
+    "sha256":  "525fb7188fe4be052388757d7f488194f2e15b768d2fd131e381e095592707b8",
     "download_url":  "https://github.com/VaxirMusic/vaxirmusic.github.io/releases/latest/download/setup.exe"
 }
